@@ -1,0 +1,249 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  font-family: sans-serif;
+  color: cyan;
+  background: black;
+}
+.app{
+
+  position: fixed;
+  height: 95%;
+  width: 100%;
+  max-width: 600px;
+  background: rgb(31, 31, 31);
+  border:  2px double cyan;
+  box-shadow: inset 0 0  30px cyan;
+  border-radius: 15px;
+ margin-top: 20px;
+
+
+}
+.app > .screen{
+
+  display: none;
+}
+
+.app > .screen.active{
+  display: block;
+  width: 100%;
+  height: 95%;
+
+}
+h2{
+  text-shadow: 0 0 3px cyan;
+  position: relative;
+  top: -35vh;
+  left: 2vw;
+}
+
+h2::after{
+  content: " ";
+  background: cyan;
+  height: 2px;
+  width: 74%;
+  position: absolute;
+  left: 0;
+  top: 28px;
+  
+
+
+}
+.screen .form{
+position: absolute;
+left: 50%;
+top: 30%;
+transform: translate(-50%,50%);
+width: 40%;
+max-width: 400px;
+}
+
+.screen .form-input{
+  width: 100%;
+  margin: 20px 0px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.screen .form-input input{
+  padding: 8px;
+  color: cyan;
+  background: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow:   0 0 10px cyan;
+  width: 100%;
+  transition: all ease .5s;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.screen .form-input:hover input{
+
+  box-shadow:  0 0 20px cyan;
+ 
+}
+
+.screen .form-input button{
+
+  color: cyan;
+  
+  background: black;
+  outline: none;
+  border: none;
+  padding: 8px;
+ left: 10vw;
+ font-weight: 600;
+  width: 30%;
+  transition: all ease .5s;
+  border-radius: 5px;
+  box-shadow:   0 0 5px cyan;
+  font-size: 1rem;
+}
+.screen .form-input:hover button{
+
+  box-shadow:  0 0 10px cyan;
+  width: 50%;
+ 
+}
+
+.chat-screen .header{
+
+  background: black;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  align-items: center;
+  padding: 0px 20px;
+  box-shadow: 0 0 10px cyan;
+}
+.chat-screen .header .logo{
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  filter: drop-shadow(0 0 2px cyan);
+}
+
+.chat-screen .header button{
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+  box-shadow: 0 0 10px greenyellow;
+  color: cyan;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 50px;
+  transition: all ease .5s;
+
+}
+.chat-screen .header button:hover{
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+  color: white;
+}
+.chat-screen .messages{
+width: 100%;
+height: calc(100% - 80px);
+background: transparent;
+overflow: auto;
+
+}
+.chat-screen .messages .message{
+  display: flex;
+  padding: 10px;
+}
+
+.chat-screen .messages .message >div{
+  max-width: 80%;
+  background: transparent;
+  box-shadow: inset 0 0 10px cyan;
+  padding: 10px 21px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  /* border-radius: 19px; */
+
+}
+
+.chat-screen .messages .message.my-message{
+  justify-content: flex-end;
+  color: greenyellow;
+  font-size: 1.5rem;
+}
+
+.chat-screen .messages .message.other-message{
+  justify-content: flex-start;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.chat-screen .messages .message .name{
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin-bottom: 5px;
+}
+
+.chat-screen .messages .message .text{
+  word-wrap: break-word;
+
+}
+
+.chat-screen .messages .update{
+
+  text-align: center;
+  padding: 10px;
+  display: flex;
+}
+.chat-screen .typebox{
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.chat-screen .typebox input{
+  flex: .9;
+  height: 39px;
+  font-size: 20px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: black;
+  box-shadow: inset 0 0 10px white;
+  outline: none;
+  border: none;
+  color: cyan;
+  padding: 0px 20px;
+}
+.chat-screen .typebox button{
+
+  background: black;
+  height: 40px;
+  
+  padding: 5px 15px;
+  box-shadow:  inset 0 0 10px rgb(255, 255, 255);
+  border: none;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  color: cyan;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all ease .5s;
+
+}
+.chat-screen .typebox button:hover{
+
+  color: greenyellow;
+  box-shadow:  inset 0 0 10px greenyellow;
+}
